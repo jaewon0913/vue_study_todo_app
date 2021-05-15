@@ -17,13 +17,16 @@ export default {
     },
     methods: {
         addTodo: function(){
-            console.log(this.newTodoItem);
+            //console.log(this.newTodoItem);
             //  저장 로직
-            localStorage.setItem(this.newTodoItem, this.newTodoItem);
+            if (this.newTodoItem !== ''){
+                var obj = {completed: false, item: this.newTodoItem};
+                localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
 
-            //  input 비우기
-            //this.newTodoItem = '';
-            this.clearInput();
+                //  input 비우기
+                //this.newTodoItem = '';
+                this.clearInput();
+            }
         },
         clearInput: function(){
             this.newTodoItem = '';
