@@ -1,5 +1,5 @@
 <template>
-  <div class="clearAllContainer">
+  <div class="clearAllContainer shadow">
       <span class="claerAllBtn" v-on:click="clearTodo()">Clear All</span>
   </div>
 </template>
