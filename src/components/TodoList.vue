@@ -36,14 +36,14 @@ export default {
   // },
   props: ['propsdata'],
   methods: {
-    removeTodo: function(todoItem, index){
+    removeTodo(todoItem, index){
       //console.log('remove todo');
       //console.log(todoItem + ", " + index);
       this.$emit('removeItem', todoItem, index);
       // localStorage.removeItem(todoItem);
       // this.todoItems.splice(index, 1);
     },
-    toggleComplete: function(todoItem, index){
+    toggleComplete(todoItem, index){
       this.$emit('toggleItem', todoItem, index);
       // todoItem.completed = !todoItem.completed;
       
