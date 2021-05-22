@@ -67,11 +67,15 @@ export default {
     }
   },
   components: {
+    TodoHeader,
+    TodoList,
+    TodoInput,
+    TodoFooter
     // 컴포넌트 태그명 : 컴포넌트 내용
-    'TodoHeader': TodoHeader,
-    'TodoList': TodoList,
-    'TodoInput': TodoInput,
-    'TodoFooter': TodoFooter
+    // 'TodoHeader': TodoHeader,
+    // 'TodoList': TodoList,
+    // 'TodoInput': TodoInput,
+    // 'TodoFooter': TodoFooter
   }
   
 }
