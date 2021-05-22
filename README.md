@@ -1,4 +1,5 @@
-# vue-todo
+# vue-todo-basic
+## 인프런 강의의 기본 todo app
 
 ## Project setup
 ```
