@@ -39,7 +39,11 @@ export default {
             //  저장 로직
             if (this.newTodoItem !== ''){
                 // this.$emit('이벤트 이름', 인자);
-                this.$emit('addTodoItem', this.newTodoItem);
+                //this.$emit('addTodoItem', this.newTodoItem);
+
+                const text = this.newTodoItem.trim();
+                this.$store.commit('addOnItems', text);
+                
                 // var obj = {completed: false, item: this.newTodoItem};
                 // localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
 

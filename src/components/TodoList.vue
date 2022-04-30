@@ -34,17 +34,25 @@ export default {
   //     }
   //   }
   // },
-  props: ['propsdata'],
+  //props: ['propsdata'],
   methods: {
     removeTodo(todoItem, index){
       //console.log('remove todo');
       //console.log(todoItem + ", " + index);
-      this.$emit('removeItem', todoItem, index);
+      //this.$emit('removeItem', todoItem, index);
+
+      const obj = {
+        todoItem, index
+      }
+      this.$store.commit('removeOneItem', obj);
+
       // localStorage.removeItem(todoItem);
       // this.todoItems.splice(index, 1);
     },
     toggleComplete(todoItem, index){
-      this.$emit('toggleItem', todoItem, index);
+      //this.$emit('toggleItem', todoItem, index);
+      this.$store.commit('toggleOneItem', {todoItem, index});
+
       // todoItem.completed = !todoItem.completed;
       
       //  로컬 스토리지의 데이터를 갱신
